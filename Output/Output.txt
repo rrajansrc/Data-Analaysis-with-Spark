@@ -1,0 +1,113 @@
+Program Starts..
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
++--------+
+|count(1)|
++--------+
+|36256549|
++--------+
+
+1.Hours that has highest no of taxi rides started
++--------------------------+-------+
+|hour(tpep_pickup_datetime)|  count|
++--------------------------+-------+
+|                        23|2549506|
+|                         0|2490500|
+|                        22|2326960|
+|                        20|2269281|
+|                        21|2246576|
+|                         1|2133200|
+|                        19|2121068|
+|                        18|2032237|
+|                        17|1969289|
+|                         2|1944948|
+|                         3|1866602|
+|                        16|1786040|
+|                        15|1638656|
+|                         4|1628162|
+|                        14|1489998|
+|                        13|1254205|
+|                         5|1211613|
+|                         6| 808870|
+|                        12| 808086|
+|                         7| 540712|
++--------------------------+-------+
+only showing top 20 rows
+
+2.1 Highest rides from
++------------+-------+----------+---------+--------------------+
+|PULocationID|  count|LocationID|  Borough|                Zone|
++------------+-------+----------+---------+--------------------+
+|         132|1743204|       132|   Queens|         JFK Airport|
+|         237|1696326|       237|Manhattan|Upper East Side S...|
+|         236|1508794|       236|Manhattan|Upper East Side N...|
+|         161|1449456|       161|Manhattan|      Midtown Center|
+|         186|1183749|       186|Manhattan|Penn Station/Madi...|
+|         162|1177968|       162|Manhattan|        Midtown East|
+|         142|1174434|       142|Manhattan| Lincoln Square East|
+|         230|1119560|       230|Manhattan|Times Sq/Theatre ...|
+|         170|1116441|       170|Manhattan|         Murray Hill|
+|          48|1107882|        48|Manhattan|        Clinton East|
+|         239|1031012|       239|Manhattan|Upper West Side S...|
+|         163|1024172|       163|Manhattan|       Midtown North|
+|         138| 987991|       138|   Queens|   LaGuardia Airport|
+|         234| 952468|       234|Manhattan|            Union Sq|
+|         141| 943088|       141|Manhattan|     Lenox Hill West|
+|          79| 939626|        79|Manhattan|        East Village|
+|          68| 907084|        68|Manhattan|        East Chelsea|
+|         107| 848092|       107|Manhattan|            Gramercy|
+|         164| 801746|       164|Manhattan|       Midtown South|
+|         263| 762199|       263|Manhattan|      Yorkville West|
++------------+-------+----------+---------+--------------------+
+only showing top 20 rows
+
+2.2 Highest rides to
++------------+-------+----------+---------+--------------------+
+|DOLocationID|  count|LocationID|  Borough|                Zone|
++------------+-------+----------+---------+--------------------+
+|         236|1547886|       236|Manhattan|Upper East Side N...|
+|         237|1473476|       237|Manhattan|Upper East Side S...|
+|         161|1320820|       161|Manhattan|      Midtown Center|
+|         170|1071621|       170|Manhattan|         Murray Hill|
+|         230|1066871|       230|Manhattan|Times Sq/Theatre ...|
+|         239|1000010|       239|Manhattan|Upper West Side S...|
+|         142| 988158|       142|Manhattan| Lincoln Square East|
+|         141| 978449|       141|Manhattan|     Lenox Hill West|
+|          48| 976224|        48|Manhattan|        Clinton East|
+|         162| 955619|       162|Manhattan|        Midtown East|
+|          68| 879442|        68|Manhattan|        East Chelsea|
+|         163| 870034|       163|Manhattan|       Midtown North|
+|         238| 836315|       238|Manhattan|Upper West Side N...|
+|         234| 822865|       234|Manhattan|            Union Sq|
+|         186| 814443|       186|Manhattan|Penn Station/Madi...|
+|         263| 774205|       263|Manhattan|      Yorkville West|
+|         229| 766907|       229|Manhattan|Sutton Place/Turt...|
+|          79| 765014|        79|Manhattan|        East Village|
+|         140| 744625|       140|Manhattan|     Lenox Hill East|
+|         164| 729615|       164|Manhattan|       Midtown South|
++------------+-------+----------+---------+--------------------+
+only showing top 20 rows
+
+3. Avg fair
++------------------+
+| avg(total_amount)|
++------------------+
+|21.401083774842498|
++------------------+
+
+4. Trip distance
++------------------+
+|avg(trip_distance)|
++------------------+
+| 6.077696230118185|
++------------------+
+
+5. Vendor ratio
++--------+----------+
+|VendorID|totalRides|
++--------+----------+
+|       6|     59165|
+|       5|       143|
+|       1|  10329058|
+|       2|  25867651|
++--------+----------+
+
