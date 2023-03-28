@@ -2,11 +2,9 @@
 Performing Simple data analysis on the batch file using Spark
 
 Introduction
-
 	Implemented simple data analysis on the batch file stored in HDFS.
 
 Business Requirement
-
 	Perform analysis on the batch file containing taxi ride records 
 
 It Covers,
