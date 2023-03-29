@@ -21,7 +21,7 @@ object TaxiAnalysis extends App{
    var taxiRidesDF = spark.read
   .format("parquet")
   .option("header", true) 
-  .option("path", "hdfs:///Projects/Dataset/Taxi/yellow_taxi_trip_records/2022/yellow*.parquet")
+  .option("path", "D:/Projects/Dataset/Taxi/yellow_taxi_trip_records/2022/yellow*.parquet")
   .load()
   
   val totalRecords = taxiRidesDF.select(expr("count (*)")).as("Total Records").show()
@@ -29,7 +29,7 @@ object TaxiAnalysis extends App{
    var zoneDF = spark.read
   .format("csv")
   .option("header", true) 
-  .option("path", "hdfs:///Projects/Dataset/Taxi/yellow_taxi_trip_records/taxi_zone_lookup.csv")
+  .option("path", "D:/Learning/BigData/Workspace/Spark/Project/data/taxi_zone_lookup.csv")
   .load()
   
   var rideData = taxiRidesDF.where(expr("year(tpep_pickup_datetime) = 2022")).orderBy("tpep_pickup_datetime").
