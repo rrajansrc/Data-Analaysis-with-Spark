@@ -10,6 +10,7 @@ Business Requirement
 	Perform analysis on the batch file containing taxi ride records 
 
 It Covers,
+
 	1.	HDFS
 	
 	2.	Spark
